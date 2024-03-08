@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+           <meta charset="utf-8" />
+           <title>form</title>
+           <link rel="stylesheet" href="./mystyle.css">
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+           
+
+    </head>
+    <body>
+       
+        <div class="tokhai">
+            <div class="header">
+                <header style="background-color: rgb(96, 215, 148);">
+                   <img src="https://benhviennhitrunguong.gov.vn/wp-content/themes/benh-vien-nhi/assets/images/logo.png?fbclid=IwAR1_1dzEQnhi4ETb9WdIOAs-Zj6rc2ukJPHWEJtqk23NEOJ-4mdhROLq9HE"/>
+                    <i class="fas fa-bars"></i>
+                
+                </header>
+            </div>
+           
+             <h2 style="color: rgb(85, 192, 131);">TỜ KHAI Y TẾ <br> BỆNH VIỆN NHI TRUNG ƯƠNG</h2>
+             <h6><i>VIỆC CUNG CẤP THÔNG TIN VÀ PHỐI HỢP THAM GIA LỜI KHAI CỦA ÔNG/BÀ LÀ TỰ <br> NGUYỆN VÀ TRUNG THỰC VÌ MỤC ĐÍCH CHÓNG DỊCH COVID-19</i></h6>
+            
+            <form action="" method="post">
+            <div>
+
+                <div class="box">
+                  <div class="radio-button">
+                        <input type="radio" id="benhnhan" name="radio-button" value="HTML">
+                        <label for="html"><b>Bệnh nhân</b> </label><br>
+                        <input type="radio" id="nguoinha" name="radio-button" value="HTML">
+                        <label for="html"><b>Người nhà</b></label><br>
+                        <input type="radio" id="khaiho" name="radio-button" value="HTML">
+                        <label for="html"><b>Khai hộ</b></label><br><br>
+                 </div>
+
+                 <div class="form">
+                        <label for="mabn-label">Mã bệnh nhân: </label><br> 
+                        <input type="text" id="mabn" name="mabn" placeholder="Nhập mã số bệnh nhân"><br>
+
+                        <label for="sdt-label">Số điện thoại <i style="color:red"> (*):</i></label><br>
+                        <input type="number" id="sdt" name="sdt" placeholder="Số điện thoại liên lạc"><br>
+
+                        <label for="hoten-label">Họ và tên <i style="color:red"> (*):</i></label><br>
+                        <input type="text" id="hoten" name="hoten" placeholder="Họ và tên"><br>
+
+                        <label for="nsinh-label">Ngày sinh <i style="color:red"> (*):</i></label><br>
+                        <input type="date" id="nsinh" name="nsinh"/><br>
+
+                        <label for="gtinh-label">Giới tính <i style="color:red"> (*):</i></label><br>
+                        <input type="text" id="gtinh" name="gtinh" placeholder=""/> <br>
+
+                        <label for="diachi-label">Địa chỉ<i style="color:red"> (*):</i></label><br>
+                        <input type="text" id="diachi" name="diachi" placeholder="Địa chỉ"/> <br>
+                        
+                        <label for="lydo-label">Lý do đến viện <i style="color:red"> (*):</i></label><br>
+                        <input type="text" id="lydo" name="lydo" placeholder="Khám, chữa bệnh"/> <br>
+
+                        <label for="lydo" class="dauhieu">Hiện tại bạn có những dấu hiệu nào sau đây <i style="color:red"> (*):</i> </label><br>
+                        <table>
+                                <tr>
+                                    <th id="th1">Dấu hiệu</th>
+                                    <th id="th2">Có</th>
+                                    <th id="th3">Không</th>
+                                </tr>
+                            
+                            </table>
+                </div>
+                
+            </div> 
+            </div>
+               
+        </div>         
+          </form>
+        </div>
+       
+
+    </body>
+</html>

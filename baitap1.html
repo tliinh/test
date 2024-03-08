@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tìm điểm sinh viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tìm điểm sinh viên</h1>
+        <form>
+            <label for="studentName">Nhập tên sinh viên:</label>
+            <input type="text" id="studentName" placeholder="Nhập tên">
+            <button type="button" onclick="searchStudent()">Tìm kiếm</button> <br>
+            <label for="studentdiem">Nhập điểm sinh viên:</label>
+            <input type="text" id="studentdiem" placeholder="Nhập điểm">
+            <button type="button" onclick="searchdiem()"></button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // Mảng tên sinh viên và điểm tương ứng
+        var students = ["SinhVien1", "SinhVien2", "SinhVien3"];
+        var scores = [8.5, 7.0, 9.3];
+
+        function searchStudent() {
+            var studentName = document.getElementById("studentName").value;
+            var resultDiv = document.getElementById("result");
+            var index = students.indexOf(studentName);
+
+            if (index !== -1) {
+                var score = scores[index];
+                resultDiv.innerHTML = "Tên: " + studentName + "<br>Điểm: " + score;
+            } else {
+                resultDiv.innerHTML = "Không tìm thấy sinh viên có tên " + studentName;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý công nhân</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quản lý công nhân</h1>
+        <div class="form-group">
+            <label for="ho">Họ đệm:</label>
+            <input type="text" id="ho" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="ten">Tên:</label>
+            <input type="text" id="ten" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="ngaysinh">Ngày tháng năm sinh:</label>
+            <input type="date" id="ngaysinh" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="socancuoc">Số căn cước:</label>
+            <input type="text" id="socanbuoc" class="form-control">
+        </div>
+        <button onclick="themCongNhan()">Thêm</button>
+        <button onclick="suaCongNhan()">Sửa</button>
+        <button onclick="xoaCongNhan()">Xóa</button>
+        <ul id="danhSachCongNhan"></ul>
+    </div>
+
+    <script>
+        let danhSachCongNhan = [];
+
+        function hienThiDanhSach() {
+            const danhSachUl = document.getElementById("danhSachCongNhan");
+            danhSachUl.innerHTML = "";
+
+            for (let i = 0; i < danhSachCongNhan.length; i++) {
+                const li = document.createElement("li");
+                li.textContent = `Họ đệm: ${danhSachCongNhan[i].ho}, Tên: ${danhSachCongNhan[i].ten}, Ngày sinh: ${danhSachCongNhan[i].ngaysinh}, Số căn cước: ${danhSachCongNhan[i].socanbuoc}`;
+                danhSachUl.appendChild(li);
+            }
+        }
+
+        function themCongNhan() {
+            const ho = document.getElementById("ho").value;
+            const ten = document.getElementById("ten").value;
+            const ngaysinh = document.getElementById("ngaysinh").value;
+            const socanbuoc = document.getElementById("socanbuoc").value;
+
+            if (ho && ten && ngaysinh && socanbuoc) {
+                danhSachCongNhan.push({ ho, ten, ngaysinh, socanbuoc });
+                hienThiDanhSach();
+                clearForm();
+            } else {
+                alert("Vui lòng điền đầy đủ thông tin công nhân.");
+            }
+        }
+
+        function suaCongNhan() {
+            const index = prompt("Nhập số thứ tự của công nhân cần sửa:") - 1;
+            if (index >= 0 && index < danhSachCongNhan.length) {
+                const ho = document.getElementById("ho").value;
+                const ten = document.getElementById("ten").value;
+                const ngaysinh = document.getElementById("ngaysinh").value;
+                const socanbuoc = document.getElementById("socanbuoc").value;
+
+                if (ho && ten && ngaysinh && socanbuoc) {
+                    danhSachCongNhan[index] = { ho, ten, ngaysinh, socanbuoc };
+                    hienThiDanhSach();
+                    clearForm();
+                } else {
+                    alert("Vui lòng điền đầy đủ thông tin công nhân.");
+                }
+            } else {
+                alert("Số thứ tự không hợp lệ.");
+            }
+        }
+
+        function xoaCongNhan() {
+            const index = prompt("Nhập số thứ tự của công nhân cần xóa:") - 1;
+            if (index >= 0 && index < danhSachCongNhan.length) {
+                danhSachCongNhan.splice(index, 1);
+                hienThiDanhSach();
+            } else {
+                alert("Số thứ tự không hợp lệ.");
+            }
+        }
+
+        function clearForm() {
+            document.getElementById("ho").value = "";
+            document.getElementById("ten").value = "";
+            document.getElementById("ngaysinh").value = "";
+            document.getElementById("socanbuoc").value = "";
+        }
+    </script>
+</body>
+</html>

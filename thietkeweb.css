@@ -1,0 +1,54 @@
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans;
+;
+}
+ul{
+    list-style-type: none;
+ 
+    padding: 0 40px;
+    overflow: hidden;
+    background-color: rgb(214, 234, 255);
+    font-size: 15px;
+}
+li{
+    float: left;
+}
+li a, .hoctap{
+    display: block;/* hiển thị một phần tử như một khối. Phần tử sẽ chiếm toàn bộ chiều rộng của hộp cha và sẽ được đặt ở một dòng riêng biệt.*/
+    color: purple;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+    
+}
+li a:hover, .ht:hover .hoctap{
+    background-color: rgb(210, 192, 255);
+}
+
+li.ht{
+    display: inline-block;/* có thể có chiều rộng và chiều cao cố định.*/
+}
+.menu{
+    display: none;
+    position: absolute;/* phần tử đó sẽ được định vị dựa trên phần tử cha gần nhất có thuộc tính vị trí (position) khác */
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.menu a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    
+}
+.menu a:hover{
+    background-color: rgb(244, 221, 221);
+}
+.ht:hover .menu{
+    display: block;
+}
+h2{
+    color: rgb(59, 133, 202);
+}

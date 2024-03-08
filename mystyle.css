@@ -1,0 +1,80 @@
+.tokhai{
+    border: 1px solid  rgb(96, 215, 148);
+    margin: 2px 300px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans;
+
+}
+img{
+    width: 30%;
+}
+
+.fa-bars{
+   
+    font-size: 25px;
+    color: white;
+    margin-left: 350px;;
+
+    
+}
+h2,h6{
+    text-align: center;
+    color: rgb(96, 215, 148);
+    font-family: "Helvetica Neue",Helvetica,Arial,sans;
+}
+
+.radio-button{
+   display: flex;
+   flex-direction: row;
+   justify-content: left;
+   align-items: center;
+   margin-left: 5px;
+   
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: left;
+    justify-content: center;
+    align-items: flex-start;/*căn chỉnh các phần tử con  theo chiều dọc*/
+    margin-left: 10px;
+   
+}
+.box{
+    border: 1px solid  rgb(96, 215, 148);
+   
+
+}
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="date"] {
+  padding: 7px;
+  width: 95%;
+ 
+}
+header{
+    display:flex ; 
+    align-items: center;
+    padding: 15px 0px;
+    
+
+}
+table,th{
+    border: 1.5px solid rgba(29, 28, 28, 0.1);
+    border-collapse: collapse;
+    height: 42px;
+    padding-top: 5px;
+}
+.dauhieu{
+    margin-bottom: 5px;
+}
+
+#th1{
+    width: 50px;
+}
+#th2{
+    width: 30px;
+}
+#th3{
+    width: 15%;
+}

@@ -1,0 +1,13 @@
+body{
+    margin: 0 20px;
+}
+h1{
+    color: purple;
+    font-family: 'Open Sans';
+}
+h3{
+    text-align: right;
+}
+ul{
+    list-style-type: none;
+}

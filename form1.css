@@ -1,0 +1,10 @@
+.text-box{
+    display: flex;
+    margin-left: 350px;
+}
+button{
+    margin-left: 20px;
+}
+#chia{
+    margin-right: 13px;
+}

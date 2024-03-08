@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bài toán PHP</title>
+</head>
+<body>
+    <h1>Phép Cộng 2 Số</h1>
+    <form method="post">
+        Số thứ nhất: <input type="text" name="num1"><br>
+        Số thứ hai: <input type="text" name="num2"><br>
+        <input type="submit" value="Tính">
+    </form>
+
+    <?php
+    // Hàm kiểm tra số nguyên tố
+    function isPrime($num) {
+        if ($num <= 1) {
+            return false;
+        }
+        for ($i = 2; $i <= sqrt($num); $i++) {
+            if ($num % $i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    if (isset($_POST['num1']) && isset($_POST['num2'])) {
+        $num1 = intval($_POST['num1']);
+        $num2 = intval($_POST['num2']);
+
+        // 1. Thực hiện phép cộng
+        $sum = $num1 + $num2;
+        echo "Kết quả phép cộng là: $sum<br>";
+
+        // 2. Lấy phần nguyên và thực hiện phép chia lấy dư
+        $quotient = floor($num1 / $num2);
+        $remainder = $num1 % $num2;
+        echo "Phần nguyên của phép chia: $quotient<br>";
+        echo "Phần dư của phép chia: $remainder<br>";
+
+        // 3. Tìm và liệt kê số nguyên tố giữa phần nguyên của 2 số
+        echo "Các số nguyên tố giữa $quotient và $num2 là: ";
+        for ($i = $quotient; $i <= $num2; $i++) {
+            if (isPrime($i)) {
+                echo "$i ";
+            }
+        }
+    }
+    ?>
+</body>
+</html>
